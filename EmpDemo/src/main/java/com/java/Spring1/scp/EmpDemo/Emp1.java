@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public /*abstract*/ class Emp1 {
 	private String empName;
-	private int empId;
+	private int empId1;
 	private Address address;
 	
 	
