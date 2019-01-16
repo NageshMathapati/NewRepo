@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean id = "emp" class = "com.java.Spring1.scp.EmpDemo.Emp1" scope="singleton">
+      <property name = "empName" value = "nitesh"/>
+      <property name = "empId" value = "101"/>
+     <!--  <property name = "address" ref = "ads"/> -->
+     <lookup-method name="getAddress1" bean="ads"/>
+   </bean>
+   
+     <bean id = "ads" class = "com.java.Spring1.scp.EmpDemo.Address" scope="prototype">
+      <property name = "city" value = "kolhapur"/>
+      <property name = "pincode" value = "416504"/>
+   </bean> 
+    <bean id = "ads1" class = "com.java.Spring1.scp.EmpDemo.Address" scope="prototype">
+      <property name = "city" value = "kolhapur"/>
+      <property name = "pincode" value = "416504"/>
+   </bean>  
+ 
+   
+   
+   
+   
+   
+   
+<!-- 
+    <bean id = "emp" class = "com.java.Spring1.scp.EmpDemo.Emp1" autowire="byType">
+      <property name = "empName" value = "nitesh"/>
+      <property name = "empId" value = "101"/>
+      <property name = "address" ref = "ads"/>
+   </bean>
+ -->
+
+    <!-- <bean id = "emp" class = "com.java.Spring1.scp.EmpDemo.Emp1" autowire="byName">
+      <property name = "empName" value = "nitesh"/>
+      <property name = "empId" value = "101"/>
+      <property name = "address" ref = "ads"/>
+   </bean>
+ -->
+   <!-- <bean id = "address" class = "com.java.Spring1.scp.EmpDemo.Address">
+      <property name = "city" value = "kolhapur"/>
+      <property name = "pincode" value = "416504"/>
+   </bean> -->  
+   
+  
+  <!-- 
+   <bean id ="emp" class="com.java.Spring1.scp.EmpDemo.Emp1" autowire="default" scope="singleton">
+   <constructor-arg name="empName" value="nagesh"></constructor-arg>
+   <constructor-arg name="empId" value="120"></constructor-arg>
+   <constructor-arg ref="ads"></constructor-arg>  
+   </bean>
+   
+   <bean id="ads" class="com.java.Spring1.scp.EmpDemo.Address" scope="singleton">
+   <constructor-arg name="city" value="pune" type="String"></constructor-arg>
+   <constructor-arg name="pincode" value="416504" type="int"></constructor-arg> 
+   
+   
+   </bean> 
+ -->
+</beans>
