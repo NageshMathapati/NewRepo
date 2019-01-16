@@ -5,9 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 public /*abstract*/ class Emp1 {
 	private String empName;
 	private int empId;
+	private Address address;
 	
 	
-	abstract public Address getAddress1();
+	// public Address getAddress1();
 	
 	
 	public String getEmpName() {
@@ -25,7 +26,7 @@ public /*abstract*/ class Emp1 {
 		this.empId = empId;
 	}
 	public Address getAddress() {
-		return getAddress1();
+		return address;
 	}
 	/*public void setAddress(Address address) {
 		this.address = address;
