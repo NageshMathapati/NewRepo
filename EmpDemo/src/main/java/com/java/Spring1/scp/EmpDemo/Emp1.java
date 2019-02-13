@@ -6,12 +6,13 @@ public /*abstract*/ class Emp1 {
 	private String empName;
 	private int empId;
 	private Address address;
-	
+	private Address address1;
 	
 	// public Address getAddress1();
 	
 	
 	public String getEmpName() {
+		System.out.println("nitesh");
 		return empName;
 	}
 	public void setEmpName(String empName) {
